@@ -99,7 +99,7 @@ def main():
                 if not clause_re.fullmatch(token):
                     raise ValueError(f"\"{token}\" is not formatted correctly.")
                 literals.add(Literal.from_string(token))
-            clauses.append(frozenset(literals))    
+            clauses.append(frozenset(literals))
     finally:
         if src != sys.stdin:
             src.close()
@@ -110,5 +110,4 @@ def main():
     else:
         print("The consequent is not entailed.")
 
-if __name__ == "__main__":
-    main()
+main()
